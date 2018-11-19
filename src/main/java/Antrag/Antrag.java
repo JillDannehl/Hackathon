@@ -2,6 +2,7 @@ package Antrag;
 
 public class Antrag {
 	
+		private int id;
 	    private String vorname;
 	    private String nachname;
 	    private Long praeferenz1;
@@ -9,6 +10,13 @@ public class Antrag {
 	    private Long praeferenz3;
 	    boolean abgelehnt;
 	    
+	    public void setID(int id) {
+	    	this.id = id;
+	    }
+	    
+	    public int getID () {
+	    	return id;
+	    }
 
 	    public Antrag(String vorname, String nachname, Long praeferenz1, Long praeferenz2, Long praeferenz3) {
 	    }
