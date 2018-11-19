@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * Interface der AWK-Komponente zur Verwaltung (Erstellen und Lesen) von Einträgen.
+ * 
+ * HEllo Javadoc!
  */
 public interface Verwaltung {
 
