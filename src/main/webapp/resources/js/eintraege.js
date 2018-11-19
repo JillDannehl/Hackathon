@@ -36,22 +36,32 @@ function eintragAnzeigen(verfasser, text, datum) {
 }
 
 function neuenEintragErstellen() {
-    var verfasser = $('#verfasser_input').val();
-    var text = $('#text_input').val();
-    var jsonData= {"verfasser":verfasser, "text":text};
+    var vorname = $('#vorname').val();
+    var nachname = $('#nachname').val();
+    var präferenz1 = $('#präferenz1').val();
+    var präferenz2 = $('#präferenz2').val();
+    var präferenz3 = $('#präferenz3').val();
+    var jsonData= {"vorname":vorname, "nachname":nachname, "präferenz1":präferenz1, "präferenz2":präferenz2, 
+    		"präferenz3":präferenz3} ;
 
     $.ajax({
         type: "POST",
-        url: "eintrag",
+        url: "antrag",
         data: JSON.stringify(jsonData),
         contentType: "application/json; charset=utf-8",
         success: function (data, status, jqXHR) {
-            $('#verfasser_input').val('');
-            $('#text_input').val('');
+            $('#vorname').val('');
+            $('#nachname').val('');
+            $('#präferenz1').val('');
+            $('#präferenz2').val('');
+            $('#präferenz3').val('');
+            
+            
             ladeEintraege();
         },
         error: function (response, status, error) {
-            var error = JSON.parse(response.responseText);
+        	console.log(response);
+            var error = JSON.parse(response);
             alert(error.message);
         }
     });
