@@ -7,6 +7,8 @@ import de.reineckm.test.helloisy.persistence.verwaltung.dao.EintragDao;
 import de.reineckm.test.helloisy.persistence.verwaltung.entity.Eintrag;
 import org.springframework.transaction.annotation.Transactional;
 
+import Antrag.Antrag;
+
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -24,8 +26,8 @@ public class VerwaltungImpl implements Verwaltung {
     }
 
     @Override
-    public EintragDaten neuerEintrag(NeuerEintrag neuerEintrag) {
-        Eintrag eintrag = new Eintrag();
+    public void erfasseAntrag(Antrag antrag) {
+        /*Eintrag eintrag = new Eintrag();
         eintrag.setText(neuerEintrag.getText());
         eintrag.setVerfasser(neuerEintrag.getVerfasser());
         eintrag.setDatum(ZonedDateTime.now(ZoneId.of("Z")));
@@ -33,14 +35,6 @@ public class VerwaltungImpl implements Verwaltung {
         eintragDao.speichere(eintrag);
 
         return mappeEintrag(eintrag);
-    }
-
-    @Override
-    public List<EintragDaten> leseAlleEintraege() {
-        return eintragDao.leseAlle().stream().map(this::mappeEintrag).collect(Collectors.toList());
-    }
-
-    private EintragDaten mappeEintrag(Eintrag eintrag) {
-        return new EintragDaten(eintrag.getVerfasser(), eintrag.getText(), eintrag.getDatum());
+        */
     }
 }

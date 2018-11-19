@@ -5,6 +5,8 @@ import de.reineckm.test.helloisy.core.verwaltung.eingabedaten.NeuerEintrag;
 
 import java.util.List;
 
+import Antrag.Antrag;
+
 /**
  * Interface der AWK-Komponente zur Verwaltung (Erstellen und Lesen) von Einträgen.
  * 
@@ -12,20 +14,6 @@ import java.util.List;
  */
 public interface Verwaltung {
 
+	void erfasseAntrag(Antrag a);
 
-    /**
-     * Erstellt einen neuen Eintrag.
-     *
-     * @param neuerEintrag Schnittstellenobjekt mit den Daten des neuen Eintrags.
-     * @return Schnittstellenobjekt mit den Daten des neuen Eintrags zur Darstellung.
-     */
-    EintragDaten neuerEintrag(NeuerEintrag neuerEintrag);
-
-
-    /**
-     * Liest alle vorhandenen Einträge.
-     *
-     * @return Eine Liste mit Schnittstellenobjekten zur Darstellung der Einträge.
-     */
-    List<EintragDaten> leseAlleEintraege();
 }
