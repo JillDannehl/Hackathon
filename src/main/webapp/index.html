@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>helloisy</title>
+    <title>Präferenzen auswählen</title>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <script type="text/javascript" src="resources/js/jquery.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery-dateFormat.min.js"></script>
@@ -10,14 +10,47 @@
 </head>
 
 <body onload="ladeEintraege()">
-<h1>helloisy</h1>
+<h1>Präferenzen auswählen</h1>
 <br>
 <div id="eintrag_form">
     <div>
-        <input type="text" id="verfasser_input" value="" placeholder="Name">
+        <input type="text" id="vorname" value="" placeholder="Vorname">
+    </div>
+     <div>
+        <input type="text" id="nachname" value="" placeholder="Nachname">
     </div>
     <div>
-        <textarea rows="10" id="text_input" placeholder="Text"></textarea>
+    
+ 
+    <select name="präferenz_1">
+      <option>Kita1</option>
+      <option>Kita2</option>
+      <option>Kita3</option>
+      
+    </select>
+
+    </div>
+        <div>
+    
+ 
+    <select name="präferenz_2">
+      <option>Kita1</option>
+      <option>Kita2</option>
+      <option>Kita3</option>
+      
+    </select>
+
+    </div>
+        <div>
+    
+ 
+    <select name="präferenz_3">
+      <option>Kita1</option>
+      <option>Kita2</option>
+      <option>Kita3</option>
+      
+    </select>
+
     </div>
     <div>
         <input type="submit" value="Abschicken!" onclick="neuenEintragErstellen()">
